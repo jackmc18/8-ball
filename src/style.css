@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Roboto');
 body {
   text-align: center;
   background-color: #1E3628;
-  color: white
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: 'Noto Serif', sans-serif;
 }
 
 .box {
@@ -24,4 +31,16 @@ body {
 
 .hidden {
   display: none;
+}
+
+#question {
+  margin: 20px 0;
+  height: 25px;
+  width: 250px;
+  font-size: 1.1em;
+  font-family: Roboto, sans-serif;
+}
+
+#question-label {
+  font-size: 1.5em;
 }
