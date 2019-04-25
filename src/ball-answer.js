@@ -4,7 +4,7 @@ const answers = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Y
   'My sources say no.', 'Outlook not so good.', 'Very doubtful.'];
 
 function ballAnswer(question) {
-  if(question) {
+  if(question.trim()) {
     let random = Math.floor(Math.random() * 20); 
     return answers[random];
   }
