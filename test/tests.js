@@ -1,6 +1,5 @@
 const test = QUnit.test;
 
-// Make a custom assertion
 QUnit.assert.contains = function(needle, haystack, message) {
   var actual = haystack.indexOf(needle) > -1;
   this.push(actual, actual, needle, message);
