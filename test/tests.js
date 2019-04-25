@@ -2,8 +2,13 @@ import { ballAnswer, answers } from '../src/ball-answer.js';
 const test = QUnit.test;
 
 QUnit.assert.contains = function(needle, haystack, message) {
-  var actual = haystack.indexOf(needle) > -1;
-  this.push(actual, actual, needle, message);
+  var actual = haystack.indexOf(needle);
+  this.pushResult({
+    result: (actual >= 0 && actual < haystack.length),
+    actual: actual,
+    expected: haystack,
+    message: message
+  });
 };
 
 test('Send a question and expect an answer from the array of answers', function(assert) {
