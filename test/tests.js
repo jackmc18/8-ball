@@ -16,7 +16,7 @@ function ballAnswer(question) {
     let random = Math.floor(Math.random() * 20); 
     return answers[random];
   }
-  return;
+  return 'Please ask a question.';
 }
 
 test('Send a question and expect an answer from the array of answers', function(assert) {
@@ -29,4 +29,16 @@ test('Send a question and expect an answer from the array of answers', function(
   // Call the function you're testing and set the result to a const
   //Assert
   assert.contains(result, expected);
+});
+
+test('Send a blank question and expect "Please ask a question"', function(assert) {
+  //Arrange
+  // Set up your parameters and expectations
+  const question = '';
+  const expected = 'Please ask a question.';
+  //Act 
+  const result = ballAnswer(question);
+  // Call the function you're testing and set the result to a const
+  //Assert
+  assert.equal(result, expected);
 });
