@@ -1,3 +1,26 @@
 body {
   text-align: center;
 }
+
+.box {
+  width: 100px;
+  display: table;
+  white-space:  pre-wrap;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}

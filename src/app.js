@@ -7,5 +7,6 @@ const answerMessage = document.getElementById('message');
 submitButton.addEventListener('click', () => {
   const question = questionInput.value;
   const answer = ballAnswer(question);
-  answerMessage.textContent = 'Your answer: ' + answer;
+  answerMessage.textContent = answer;
+  answerMessage.classList.remove('hidden');
 });
